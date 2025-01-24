@@ -1,6 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
+from pymongo import MongoClient
 
 app = Flask(__name__)
+
+client = MongoClient("mongodb://mongodb:27017/")
+db = client["CardCollector"]
 
 @app.route('/')
 def start():
@@ -8,11 +12,15 @@ def start():
 
 @app.route('/login')
 def login():
-    return render_template('login.hteml')
+    return render_template('login.html')
 
 @app.route('/register')
 def register():
     return render_template('register.html')
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 @app.route('/collection')
 def collection():
