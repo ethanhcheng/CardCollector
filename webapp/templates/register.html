@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name = "viewport" content = "width=device-width", initial-scale = "1.0">
-        <title>Login</title>
+        <title>Register</title>
         <style>
             body {
                 font-family: Arial, Helvetica, sans-serif;
@@ -27,8 +27,8 @@
         </style>
     </head>
     <body>
-        <form id="LoginForm" method="POST" actio="/login" >
-            <h2>Login</h2>
+        <form id="RegisterForm" method="POST" action="/register">
+            <h2>Register</h2>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required />
 
@@ -36,7 +36,7 @@
             <input type="text" id="password" name="password" required />
 
             <button type="submit">Login</button>
-            <p id="LoginError" style="color: red;"></p>
+            <p id="RegisterError" style="color: red;"></p>
         </form>
     </body>
 </html>
